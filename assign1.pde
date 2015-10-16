@@ -1,5 +1,5 @@
 PImage img1,img2,enemy,fighter,hp,treasure;
-int x=0,rhp=0,g1=0,g2=640;
+int x=0,m=0,n=0,g1=0,g2=640;
 void setup () 
 {
   size(640,480);
@@ -22,11 +22,11 @@ void draw()
   image(fighter,550,240);
   fill(250,0,0);
   if(x==0)
-    rhp=40*floor(random(6));
-  rect(5,5,205-rhp,20);
+    m=8*floor(random(6));
+  rect(5,5,205-m*5,20);
   image(hp,2,2);
   x+=2;
   g1+=1;
   g2+=1;
-  image(treasure,100,230);
+  image(treasure,100+m,130-m);
 }
